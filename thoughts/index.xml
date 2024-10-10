@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mortal Odyssey</title>
-    <link>https://www.mortalodyssey.com/</link>
-    <description>Recent content on Mortal Odyssey</description>
+    <title>Thoughts on Mortal Odyssey</title>
+    <link>https://www.mortalodyssey.com/thoughts/</link>
+    <description>Recent content in Thoughts on Mortal Odyssey</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 10 Oct 2024 10:27:12 +0800</lastBuildDate>
-    <atom:link href="https://www.mortalodyssey.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.mortalodyssey.com/thoughts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Do Not Go Gentle Into That Good Night</title>
       <link>https://www.mortalodyssey.com/thoughts/do-not-go-gentle-into-that-good-night/</link>

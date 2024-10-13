@@ -385,28 +385,28 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </ul>
 </li>
 </ul>
-<p>那么从奇偶角度提出假设 ，试证明：</p>
+<p>那么对那个从奇偶角度提出的假设，结合已算出的1、2、3、4点树SG和上文枚举的操作一次得到的所有情况，用数学归纳的思路，试证明：</p>
 <ul>
 <li>拿走1个点，可能
 <ul>
 <li>这棵树的节点会少一个（拿走的没儿子）
 <ul>
-<li>奇树 变为偶树 2</li>
-<li>偶树 变为奇树 1</li>
+<li>奇树 变为偶树 (SG为2)</li>
+<li>偶树 变为奇树 (SG为1)</li>
 </ul>
 </li>
 <li>分为多棵树（拿走的有儿子）
 <ul>
-<li>奇树可能：
+<li>奇树可能分为：
 <ul>
-<li>偶数个奇树 奇数个偶树 2</li>
-<li>偶数个奇树 偶数个偶树 0</li>
+<li>偶数个奇树 奇数个偶树 (SG为2)</li>
+<li>偶数个奇树 偶数个偶树 (SG为0)</li>
 </ul>
 </li>
-<li>偶树可能：
+<li>偶树可能分为：
 <ul>
-<li>奇数个奇树 奇数个偶树 3</li>
-<li>奇数个奇树 偶数个偶树 1</li>
+<li>奇数个奇树 奇数个偶树 (SG为3)</li>
+<li>奇数个奇树 偶数个偶树 (SG为1)</li>
 </ul>
 </li>
 </ul>
@@ -417,15 +417,15 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 <ul>
 <li>分为2棵树
 <ul>
-<li>奇树
+<li>奇树分为
 <ul>
-<li>1奇1偶 3</li>
+<li>1奇1偶 (SG为3)</li>
 </ul>
 </li>
-<li>偶树
+<li>偶树可能分为
 <ul>
-<li>2偶 0</li>
-<li>2奇 0</li>
+<li>2偶 (SG为0)</li>
+<li>2奇 (SG为0)</li>
 </ul>
 </li>
 </ul>

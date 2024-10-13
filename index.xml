@@ -6,8 +6,15 @@
     <description>Recent content on Mortal Odyssey</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Oct 2024 10:27:12 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 13 Oct 2024 20:21:21 +0800</lastBuildDate>
     <atom:link href="https://www.mortalodyssey.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CCPC Harbin 2023</title>
+      <link>https://www.mortalodyssey.com/posts/ccpc-harbin/</link>
+      <pubDate>Sun, 13 Oct 2024 20:21:21 +0800</pubDate>
+      <guid>https://www.mortalodyssey.com/posts/ccpc-harbin/</guid>
+      <description>&lt;p&gt;一次很乐的vp，简单补下题&lt;/p&gt;&#xA;&lt;h3 id=&#34;j-game-on-a-forest&#34;&gt;J. Game on a Forest&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://codeforces.com/gym/104813/problem/J&#34; target=&#34;_blank&#34;&gt;Problem - J - Codeforces&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;题意是有一个森林，2个人交替取走 一个节点及其所连所有边 或 一条边，无法操作者输。问先手第一步有多少操作能导向胜利局面。&lt;/p&gt;&#xA;&lt;p&gt;边数、点数$O(1e5)$&lt;/p&gt;&#xA;&lt;p&gt;森林是由一些分散的树构成的，每个树的情况都有独立性，组合在一起更显复杂。但经典的&lt;a href=&#34;https://oi-wiki.org/math/game-theory/impartial-game/#%E6%9C%89%E5%90%91%E5%9B%BE%E6%B8%B8%E6%88%8F%E4%B8%8E-sg-%E5%87%BD%E6%95%B0&#34; target=&#34;_blank&#34;&gt;公平组合游戏 - OI wiki&lt;/a&gt;中对这种情况早有叙述。毕竟在Nim游戏中，也有几堆石头，每堆石头的情况是相对独立的。&lt;/p&gt;&#xA;&lt;p&gt;截图OI wiki上的SG定理&#xA;&lt;img src=&#34;https://pic-1324265358.cos.ap-nanjing.myqcloud.com/20241013173737.png&#34; alt=&#34;image.png&#34;&gt;&#xA;那么，只要将一棵树建模为有向图，分析它的SG函数即可。&#xA;较为复杂的事是，玩家有2种操作：拿边和拿点.&#xA;易得1个点的树SG值为1，2个点的树SG值为2（#-# -&amp;gt; # # 或 # , SG分别为0，1）.&#xA;3个点的树形态也唯一，可以继续推得是1，进而推得4是2. 开始有规律了，似乎是奇数节点数的树SG值为1，偶数的为2.&lt;/p&gt;&#xA;&lt;p&gt;在这里先泛泛地想一下，对多个点的树进行操作可能的所有情况：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;拿走1个点，可能&#xA;&lt;ul&gt;&#xA;&lt;li&gt;这棵树的节点会少一个（拿走的没儿子）&lt;/li&gt;&#xA;&lt;li&gt;分为多棵树（拿走的有儿子）&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;拿走1边，会&#xA;&lt;ul&gt;&#xA;&lt;li&gt;分为2棵树&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;那么从奇偶角度提出假设 ，试证明：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;拿走1个点，可能&#xA;&lt;ul&gt;&#xA;&lt;li&gt;这棵树的节点会少一个（拿走的没儿子）&#xA;&lt;ul&gt;&#xA;&lt;li&gt;奇树 变为偶树 2&lt;/li&gt;&#xA;&lt;li&gt;偶树 变为奇树 1&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;分为多棵树（拿走的有儿子）&#xA;&lt;ul&gt;&#xA;&lt;li&gt;奇树可能：&#xA;&lt;ul&gt;&#xA;&lt;li&gt;偶数个奇树 奇数个偶树 2&lt;/li&gt;&#xA;&lt;li&gt;偶数个奇树 偶数个偶树 0&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;偶树可能：&#xA;&lt;ul&gt;&#xA;&lt;li&gt;奇数个奇树 奇数个偶树 3&lt;/li&gt;&#xA;&lt;li&gt;奇数个奇树 偶数个偶树 1&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;拿走1边，会&#xA;&lt;ul&gt;&#xA;&lt;li&gt;分为2棵树&#xA;&lt;ul&gt;&#xA;&lt;li&gt;奇树&#xA;&lt;ul&gt;&#xA;&lt;li&gt;1奇1偶 3&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;偶树&#xA;&lt;ul&gt;&#xA;&lt;li&gt;2偶 0&lt;/li&gt;&#xA;&lt;li&gt;2奇 0&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;发现是对的.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Do Not Go Gentle Into That Good Night</title>
       <link>https://www.mortalodyssey.com/thoughts/do-not-go-gentle-into-that-good-night/</link>

@@ -47,20 +47,20 @@
 
 
 
-  
-  
-  
 
 
+  
+  
+  
 
 
 <!-- Open Graph image and Twitter Card metadata -->
 
-<title itemprop="name">Mortal Odyssey - Posts</title>
-<meta property="og:title" content=Mortal&#32;Odyssey&#32;-&#32;Posts />
-<meta name="twitter:title" content=Mortal&#32;Odyssey&#32;-&#32;Posts />
-<meta itemprop="name" content=Mortal&#32;Odyssey&#32;-&#32;Posts />
-<meta name="application-name" content=Mortal&#32;Odyssey&#32;-&#32;Posts />
+<title itemprop="name">Mortal Odyssey - 安装Bazel并编译运行</title>
+<meta property="og:title" content=Mortal&#32;Odyssey&#32;-&#32;安装Bazel并编译运行 />
+<meta name="twitter:title" content=Mortal&#32;Odyssey&#32;-&#32;安装Bazel并编译运行 />
+<meta itemprop="name" content=Mortal&#32;Odyssey&#32;-&#32;安装Bazel并编译运行 />
+<meta name="application-name" content=Mortal&#32;Odyssey&#32;-&#32;安装Bazel并编译运行 />
 <meta property="og:site_name" content="Mortal Odyssey" />
 
 
@@ -70,18 +70,17 @@
 <meta name="twitter:description" content="" />
 
 
-<base href="https://www.mortalodyssey.com/posts/" />
-<link rel="canonical" href="https://www.mortalodyssey.com/posts/" itemprop="url" />
-<meta name="url" content="https://www.mortalodyssey.com/posts/" />
-<meta name="twitter:url" content="https://www.mortalodyssey.com/posts/" />
-<meta property="og:url" content="https://www.mortalodyssey.com/posts/" />
+<base href="https://www.mortalodyssey.com/posts/cloud-computing-ex1-0/" />
+<link rel="canonical" href="https://www.mortalodyssey.com/posts/cloud-computing-ex1-0/" itemprop="url" />
+<meta name="url" content="https://www.mortalodyssey.com/posts/cloud-computing-ex1-0/" />
+<meta name="twitter:url" content="https://www.mortalodyssey.com/posts/cloud-computing-ex1-0/" />
+<meta property="og:url" content="https://www.mortalodyssey.com/posts/cloud-computing-ex1-0/" />
 
 
 <meta property="og:updated_time" content="2024-10-21T07:58:58&#43;08:00" />
 
 
 <link rel="sitemap" type="application/xml" title="Sitemap" href='https://www.mortalodyssey.com/sitemap.xml' />
-<link href="https://www.mortalodyssey.com/posts/index.xml" rel="alternate" type="application/rss+xml" title="Mortal Odyssey" />
 
 <meta name="robots" content="index,follow" />
 <meta name="googlebot" content="index,follow" />
@@ -94,25 +93,6 @@
 <meta name="apple-mobile-web-app-title" content="Mortal Odyssey" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-
-
-
-
-
-
-
-  <link rel="first" href="/posts/" />
-  <link rel="last" href="/posts/" />
-  
-  
-
-
-<meta property="og:type" content="article" />
-<meta property="article:publisher" content="" />
-<meta property="og:article:published_time" content="2024-10-21T07:58:58&#43;08:00" />
-<meta property="article:published_time" content="2024-10-21T07:58:58&#43;08:00" />
-
-
 
 
 
@@ -346,34 +326,115 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </aside>
 
             <main class="content container">
-                <h1 class="title">Posts</h1>
-<ul class="entries">
-    
-        <h3 style="text-align: center;">2024</h3>
-        
-            <li>
-                <span class="title">
-                    <a href="/posts/cloud-computing-ex1-0/">安装Bazel并编译运行</a>
-                </span>
-                <span class="published">
-                    <time class="pull-right post-list">October 21, 2024</time>
-                </span>
-            </li>
-        
-            <li>
-                <span class="title">
-                    <a href="/posts/ccpc-harbin/">CCPC Harbin 2023</a>
-                </span>
-                <span class="published">
-                    <time class="pull-right post-list">October 13, 2024</time>
-                </span>
-            </li>
-        
-    
-</ul>
+                <div class="post">
+  <div class="info">
+  <h1 class="post-title">
+    <a href="https://www.mortalodyssey.com/posts/cloud-computing-ex1-0/">安装Bazel并编译运行</a>
+  </h1>
 
+  <div class="headline">
+    <div>
+      
+      
+      <time datetime=" 2024-10-21T07:58:58&#43;0800" class="post-date">
+        October 21, 2024
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+        
+          
+        
+
+        <span>1 min read</span>
+      </span>
+    </div>
+
+    
+  </div>
+
+  
+  
+
+  
+</div>
+
+  <h2 id="关于远程服务器">关于远程服务器</h2>
+<p>本文使用ubuntu 22.04。</p>
+<p>如果需要运行trpc-cpp,可能服务器的内存要&gt;2gb，否则后期编译运行时会有问题。</p>
+<p>另外，直接登入root操作可能会遇到奇怪的问题。</p>
+<h2 id="github加速">github加速</h2>
+<p>参考这个<a href="https://www.cnblogs.com/boring-luobo/p/18458736" target="_blank">github加速 - 妖岭 - 博客园 (cnblogs.com)</a>，后续下载会快一点。</p>
+<h2 id="bazel安装配置">bazel安装配置</h2>
+<p><a href="https://bazel.build/?hl=zh-cn" target="_blank">Bazel官网</a>中可以找到推荐的安装方式是使用Bazelisk，一个有版本管理功能的Bazel启动器。
+<img src="https://pic-1324265358.cos.ap-nanjing.myqcloud.com/Pasted%20image%2020241016225027.png" alt="Pasted image 20241016225027.png"></p>
+<p>可以直接下载deb文件并安装</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wget https://github.com/bazelbuild/bazelisk/releases/download/v1.22.0/bazelisk-amd64.deb
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>dpkg -i bazelisk-amd64.deb
+</span></span></code></pre></div><p>理论上，只要输入<code>bazel</code>，bazelisk就会初次启动，自动下载Bazel某个版本。那么只要输入<code>bazel --version</code>后能看到版本信息，就能确定<code>Bazel</code>安装成功。</p>
+<p>实际上，可能会在卡顿许久后出现以下提示信息：
+<img src="https://pic-1324265358.cos.ap-nanjing.myqcloud.com/20241016233257.png" alt="image.png"></p>
+<h3 id="bazel版本设置">Bazel版本设置</h3>
+<p><a href="https://github.com/bazelbuild/bazelisk" target="_blank">bazelisk的github仓库</a>里有写到它在初次启动时如何确定下载哪个Bazel版本。
+<img src="https://pic-1324265358.cos.ap-nanjing.myqcloud.com/20241021080434.png" alt="image.png">
+可以看到，如果没有预先设置要使用的版本，它就会自动搜索使用最新的版本信息。但它搜索的<a href="https://www.googleapis.com/storage/v1/b/bazel/o?delimiter=/" target="_blank">这个链接</a>在不翻墙的情况下无法访问，因此会出现如上所示的报错。</p>
+<p>解决方法就是，预先设置要使用的version来避开这一步，可以利用.bazeliskrc文件。
+<img src="https://pic-1324265358.cos.ap-nanjing.myqcloud.com/20241016234806.png" alt="image.png">
+用这个指令即可指定version：<code>echo &quot;USE_BAZEL_VERSION=6.1.0&quot; &gt; .bazeliskrc</code> ，<code>6.1.0</code>应被实际选择版本号替代。
+至于版本的选择，如果需要编译<a href="https://github.com/trpc-group/trpc-cpp/blob/main/docs/zh/setup_env.md" target="_blank">trpc-cpp</a>，事实上需要Bazel版本是&gt;=3.5.1,&lt;7的。(<a href="https://github.com/trpc-group/trpc-cpp/blob/main/docs/zh/setup_env.md" target="_blank">参考这个</a>和<a href="https://github.com/trpc-group/trpc-cpp/issues/170" target="_blank">这个</a>)
+可以在上面的googleapi链接或<a href="https://mirrors.huaweicloud.com/bazel/" target="_blank">华为云 bazel</a>找到所有版本号。</p>
+<h3 id="其他参考链接">其他参考链接</h3>
+<p><a href="https://bazel.build/start/cpp?hl=zh-cn" target="_blank">Bazel 教程：构建 C++ 项目</a></p>
+<p><a href="https://stackoverflow.com/questions/65656165" target="_blank">另一种安装Bazelisk方式</a></p>
+<p><a href="https://github.com/bazelbuild/bazelisk/issues/571" target="_blank">Steps for installing Bazelisk are not new-developer friendly</a></p>
+<h2 id="编译运行trpc-cpp">编译运行trpc-cpp</h2>
+<p>只要按照<a href="https://github.com/trpc-group/trpc-cpp/blob/main/docs/zh/setup_env.md" target="_blank">trpc-cpp/docs/zh/setup_env.md at main · trpc-group/trpc-cpp</a>上的说明操作即可，具体如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># 进入根目录trpc-cpp</span>
+</span></span><span style="display:flex;"><span>cd trpc-cpp
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 用bazel编译并运行框架提供的example示例</span>
+</span></span><span style="display:flex;"><span>./run_examples.sh
+</span></span></code></pre></div><p>另外，如果先编译helloworld demo来测试会快一点。
+<code>./examples/helloworld/run.sh</code></p>
+
+  
+  <hr>
+<div class="footer">
+    
+	    
+            <a class="previous-post" href="https://www.mortalodyssey.com/posts/ccpc-harbin/?ref=footer"><span style="font-weight:bold;">« Previous</span><br>CCPC Harbin 2023</a>
+        
+	    
+    
+</div>
+
+  
+</div>
             </main>
             
+  
+    <div class="article-toc ">
+    <div class="toc-wrapper">
+      <h4 id="contents"></h4>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#关于远程服务器">关于远程服务器</a></li>
+    <li><a href="#github加速">github加速</a></li>
+    <li><a href="#bazel安装配置">bazel安装配置</a>
+      <ul>
+        <li><a href="#bazel版本设置">Bazel版本设置</a></li>
+        <li><a href="#其他参考链接">其他参考链接</a></li>
+      </ul>
+    </li>
+    <li><a href="#编译运行trpc-cpp">编译运行trpc-cpp</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+  
+
         </div>
     </body>
 </html>

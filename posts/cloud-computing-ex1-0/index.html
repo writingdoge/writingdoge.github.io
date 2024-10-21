@@ -382,14 +382,14 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 <p>解决方法就是，预先设置要使用的version来避开这一步，可以利用.bazeliskrc文件。
 <img src="https://pic-1324265358.cos.ap-nanjing.myqcloud.com/20241016234806.png" alt="image.png">
 用这个指令即可指定version：<code>echo &quot;USE_BAZEL_VERSION=6.1.0&quot; &gt; .bazeliskrc</code> ，<code>6.1.0</code>应被实际选择版本号替代。
-至于版本的选择，如果需要编译<a href="https://github.com/trpc-group/trpc-cpp/blob/main/docs/zh/setup_env.md" target="_blank">trpc-cpp</a>，事实上需要Bazel版本是&gt;=3.5.1,&lt;7的。(<a href="https://github.com/trpc-group/trpc-cpp/blob/main/docs/zh/setup_env.md" target="_blank">参考这个</a>和<a href="https://github.com/trpc-group/trpc-cpp/issues/170" target="_blank">这个</a>)
-可以在上面的googleapi链接或<a href="https://mirrors.huaweicloud.com/bazel/" target="_blank">华为云 bazel</a>找到所有版本号。</p>
+至于版本的选择，如果需要编译<a href="https://github.com/trpc-group/trpc-cpp/blob/main/docs/zh/setup_env.md" target="_blank">trpc-cpp</a>，事实上需要Bazel版本是&gt;=3.5.1,&lt;7的。(<a href="https://github.com/trpc-group/trpc-cpp/blob/main/docs/zh/setup_env.md" target="_blank">参考这个</a>和<a href="https://github.com/trpc-group/trpc-cpp/issues/170" target="_blank">这个</a>)</p>
+<p>可以在上面的googleapi链接或<a href="https://mirrors.huaweicloud.com/bazel/" target="_blank">华为云 bazel</a>找到所有版本号。</p>
 <h3 id="其他参考链接">其他参考链接</h3>
 <p><a href="https://bazel.build/start/cpp?hl=zh-cn" target="_blank">Bazel 教程：构建 C++ 项目</a></p>
 <p><a href="https://stackoverflow.com/questions/65656165" target="_blank">另一种安装Bazelisk方式</a></p>
 <p><a href="https://github.com/bazelbuild/bazelisk/issues/571" target="_blank">Steps for installing Bazelisk are not new-developer friendly</a></p>
 <h2 id="编译运行trpc-cpp">编译运行trpc-cpp</h2>
-<p>只要按照<a href="https://github.com/trpc-group/trpc-cpp/blob/main/docs/zh/setup_env.md" target="_blank">trpc-cpp/docs/zh/setup_env.md at main · trpc-group/trpc-cpp</a>上的说明操作即可，具体如下：</p>
+<p>只要按照<a href="https://github.com/trpc-group/trpc-cpp/blob/main/docs/zh/setup_env.md" target="_blank">trpc-cpp/docs/zh/setup_env.md</a>上的说明操作即可，具体如下：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># 进入根目录trpc-cpp</span>
 </span></span><span style="display:flex;"><span>cd trpc-cpp
 </span></span><span style="display:flex;"><span>

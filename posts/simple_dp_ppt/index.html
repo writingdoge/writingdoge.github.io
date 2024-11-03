@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+    
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+<script defer language="javascript" type="text/javascript" src="/js/bundle.min.145453261a7755f5042a854c4213501d215a8fbe34c08d181c40f803f1315e74.js"></script>
+
+
+
+
+
+
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="icon" href=/favicon.png>
+
+    
+    
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+
+
+<!-- Open Graph image and Twitter Card metadata -->
+
+<title itemprop="name">Mortal Odyssey - DP-PPT</title>
+<meta property="og:title" content=Mortal&#32;Odyssey&#32;-&#32;DP-PPT />
+<meta name="twitter:title" content=Mortal&#32;Odyssey&#32;-&#32;DP-PPT />
+<meta itemprop="name" content=Mortal&#32;Odyssey&#32;-&#32;DP-PPT />
+<meta name="application-name" content=Mortal&#32;Odyssey&#32;-&#32;DP-PPT />
+<meta property="og:site_name" content="Mortal Odyssey" />
+
+
+<meta name="description" content="" />
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
+
+
+<base href="https://www.mortalodyssey.com/posts/simple_dp_ppt/" />
+<link rel="canonical" href="https://www.mortalodyssey.com/posts/simple_dp_ppt/" itemprop="url" />
+<meta name="url" content="https://www.mortalodyssey.com/posts/simple_dp_ppt/" />
+<meta name="twitter:url" content="https://www.mortalodyssey.com/posts/simple_dp_ppt/" />
+<meta property="og:url" content="https://www.mortalodyssey.com/posts/simple_dp_ppt/" />
+
+
+<meta property="og:updated_time" content="2024-02-24T10:28:59&#43;08:00" />
+
+
+<link rel="sitemap" type="application/xml" title="Sitemap" href='https://www.mortalodyssey.com/sitemap.xml' />
+
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+
+
+
+<meta property="fb:admins" content="" />
+
+
+<meta name="apple-mobile-web-app-title" content="Mortal Odyssey" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.136.5">
+
+
+    
+    
+
+<link type="text/css" rel="stylesheet" href="/css/bundle.min.94a339836f89f0d25f31980cb6b0631da21e20af128308747ce44e0525eb16ef.css">
+
+
+    
+    <style>
+    body {
+        --sidebar-bg-color: #202020;
+        --sidebar-img-border-color: #515151;
+        --sidebar-p-color: #909090;
+        --sidebar-h1-color: #FFF;
+        --sidebar-a-color: #FFF;
+        --sidebar-socials-color: #FFF;
+        --text-color: #222;
+        --bkg-color: #FAF9F6;
+        --post-title-color: #303030;
+        --list-color: #5A5A5A;
+        --link-color: #268BD2;
+        --date-color: #515151;
+        --table-border-color: #E5E5E5;
+        --table-stripe-color: #F9F9F9;
+        --code-color: #000;
+        --code-background-color: #E5E5E5;
+        --code-block-color: #FFF;
+        --code-block-background-color: #272822;
+        --moon-sun-color: #FFF;
+        --moon-sun-background-color: #515151;
+    }
+    body.dark-theme {
+        --text-color: #EEE;
+        --bkg-color: #121212;
+        --post-title-color: #DBE2E9;
+        --list-color: #9D9D9D;
+        --link-color: #268BD2;
+        --date-color: #9A9A9A;
+        --table-border-color: #515151;
+        --table-stripe-color: #202020;
+        --code-color: #FFF;
+        --code-background-color: #515151;
+        --code-block-color: #FFF;
+        --code-block-background-color: #272822;
+    }
+    body {
+        background-color: var(--bkg-color);
+    }
+</style>
+
+</head>
+
+    <body class="dark-theme">
+        <div class="wrapper">
+            <aside class="sidebar">
+    <div class="container sidebar-sticky">
+        <div class="light-dark" align="right">
+    <button class="btn-light-dark" title="Toggle light/dark mode">
+        <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M6 .278a.768.768 0 0 1 .08.858a7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277c.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316a.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71C0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        </svg>
+        <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+        </svg>
+    </button>
+</div>
+
+        <div class="sidebar-about">
+    <h1 class="brand">
+        
+        
+            <a href="https://www.mortalodyssey.com/">
+                <h1>Mortal Odyssey</h1>
+            </a>
+        
+    </h1>
+    <p class="lead">
+    Forward, into a darkened future!
+    </p>
+</div>
+
+        <nav>
+    <ul class="sidebar-nav">
+
+        
+        
+        
+        
+            
+
+            
+                
+                
+                    <li class="heading">
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+            
+                
+                
+            
+                
+                
+            
+        
+        
+            
+
+            
+                
+                
+            
+                
+                
+                    <li class="heading">
+                        <a href="/posts/">Posts</a>
+                    </li>
+                    
+                
+            
+                
+                
+            
+                
+                
+            
+            
+                
+                
+            
+                
+                
+            
+        
+        
+            
+
+            
+                
+                
+            
+                
+                
+            
+                
+                
+                    <li class="heading">
+                        <a href="/thoughts/">Thoughts</a>
+                    </li>
+                    
+                
+            
+                
+                
+            
+            
+                
+                
+            
+                
+                
+            
+        
+
+    </ul>
+</nav>
+
+        
+    <a target="_blank" class="social" title="GitHub" href="https://github.com/writingdoge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="-2 -2 24 24">
+            <path fill="currentColor" d="M18.88 1.099C18.147.366 17.265 0 16.233 0H3.746C2.714 0 1.832.366 1.099 1.099C.366 1.832 0 2.714 0 3.746v12.487c0 1.032.366 1.914 1.099 2.647c.733.733 1.615 1.099 2.647 1.099H6.66c.19 0 .333-.007.429-.02a.504.504 0 0 0 .286-.169c.095-.1.143-.245.143-.435l-.007-.885c-.004-.564-.006-1.01-.006-1.34l-.3.052c-.19.035-.43.05-.721.046a5.555 5.555 0 0 1-.904-.091a2.026 2.026 0 0 1-.872-.39a1.651 1.651 0 0 1-.572-.8l-.13-.3a3.25 3.25 0 0 0-.41-.663c-.186-.243-.375-.407-.566-.494l-.09-.065a.956.956 0 0 1-.17-.156a.723.723 0 0 1-.117-.182c-.026-.061-.004-.111.065-.15c.07-.04.195-.059.378-.059l.26.04c.173.034.388.138.643.311a2.1 2.1 0 0 1 .631.677c.2.355.44.626.722.813c.282.186.566.28.852.28c.286 0 .533-.022.742-.065a2.59 2.59 0 0 0 .585-.196c.078-.58.29-1.028.637-1.34a8.907 8.907 0 0 1-1.333-.234a5.314 5.314 0 0 1-1.223-.507a3.5 3.5 0 0 1-1.047-.872c-.277-.347-.505-.802-.683-1.365c-.177-.564-.266-1.215-.266-1.952c0-1.049.342-1.942 1.027-2.68c-.32-.788-.29-1.673.091-2.652c.252-.079.625-.02 1.119.175c.494.195.856.362 1.086.5c.23.14.414.257.553.352a9.233 9.233 0 0 1 2.497-.338c.859 0 1.691.113 2.498.338l.494-.312a6.997 6.997 0 0 1 1.197-.572c.46-.174.81-.221 1.054-.143c.39.98.424 1.864.103 2.653c.685.737 1.028 1.63 1.028 2.68c0 .737-.089 1.39-.267 1.957c-.177.568-.407 1.023-.689 1.366a3.65 3.65 0 0 1-1.053.865c-.42.234-.828.403-1.223.507a8.9 8.9 0 0 1-1.333.235c.45.39.676 1.005.676 1.846v3.11c0 .147.021.266.065.357a.36.36 0 0 0 .208.189c.096.034.18.056.254.064c.074.01.18.013.318.013h2.914c1.032 0 1.914-.366 2.647-1.099c.732-.732 1.099-1.615 1.099-2.647V3.746c0-1.032-.367-1.914-1.1-2.647z"/>
+        </svg>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a target="_blank" class="social" title="RSS Feed" href="/posts/index.xml">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 1280.000000 1280.000000">
+            <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" fill="currentColor">
+                <path d="M2295 11929 c-284 -12 -642 -45 -707 -65 -17 -5 -18 -63 -18 -1039 0 -569 4 -1036 8 -1039 5 -3 74 6 153 19 510 86 1168 95 1789 25 1348 -153 2602 -677 3670 -1531 385 -308 820 -744 1126 -1129 842 -1060 1362 -2313 1514 -3650 70 -621 61 -1279 -25 -1789 -13 -79 -22 -148 -19 -153 3 -4 471 -8 1039 -8 l1035 0 5 23 c51 225 85 942 67 1419 -23 605 -77 1044 -198 1617 -294 1400 -927 2734 -1823 3846 -1043 1295 -2364 2259 -3909 2854 -1158 447 -2451 656 -3707 600z"/>
+                <path d="M2255 7845 c-269 -25 -620 -81 -667 -106 -17 -9 -18 -55 -18 -899 0 -706 3 -890 13 -890 6 0 66 18 132 41 130 44 288 79 467 105 154 21 577 30 749 15 1207 -107 2267 -823 2814 -1902 166 -327 268 -637 330 -1001 38 -227 48 -384 42 -662 -8 -348 -44 -590 -126 -831 -23 -66 -41 -126 -41 -132 0 -10 184 -13 890 -13 844 0 890 1 899 18 27 50 88 452 110 725 14 162 14 624 1 782 -59 703 -233 1323 -545 1945 -481 956 -1313 1788 -2270 2268 -620 310 -1239 483 -1940 542 -165 14 -669 10 -840 -5z"/>
+                <path d="M2519 3815 c-391 -66 -725 -336 -868 -703 -79 -201 -96 -462 -45 -677 83 -344 338 -641 666 -774 116 -47 205 -69 330 -80 412 -39 811 153 1040 500 193 292 240 648 128 981 -135 403 -492 699 -914 757 -100 14 -241 12 -337 -4z"/>
+            </g>
+        </svg>
+    </a>
+
+
+
+
+
+        <p class="footnote">
+powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a target="_blank" href="https://github.com/lukeorth/poison">poison</a>
+    <br>
+    &copy; 2024 Mortal Odyssey. All rights reserved.
+</p>
+
+  </div>
+</aside>
+
+            <main class="content container">
+                <div class="post">
+  <div class="info">
+  <h1 class="post-title">
+    <a href="https://www.mortalodyssey.com/posts/simple_dp_ppt/">DP-PPT</a>
+  </h1>
+
+  <div class="headline">
+    <div>
+      
+      
+      <time datetime=" 2024-02-24T10:28:59&#43;0800" class="post-date">
+        February 24, 2024
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+        
+          
+        
+
+        <span>2 mins read</span>
+      </span>
+    </div>
+
+    
+  </div>
+
+  
+  
+
+  
+</div>
+
+  <h1 id="简单dp">简单DP</h1>
+<p>writingdog</p>
+<hr>
+<h1 id="目录">目录</h1>
+<ul>
+<li>什么是DP</li>
+<li>DP怎么写</li>
+<li>例题</li>
+</ul>
+<hr>
+<h1 id="dp的简单描述">DP的简单描述</h1>
+<p>DP是适用于一类问题的解题策略。
+问题往往需要输出一个东西的存在性、次数或者最大/最小值，但不需要给出具体的方案。</p>
+<p>一种 或许可行 的思路是：<strong>给问题划分范围</strong>，解决这个问题的较小范围版本，由此算出这个问题的答案。（前i个 -&gt; 前i+1个）【子问题和原问题】</p>
+<p>能够联想到递推和递归：可以先写出初态，然后用for循环不断推，直到推出答案。也可以不断从大问题递归到小问题，直到到达可确定的初态。 【DP的两种写法】</p>
+<hr>
+<p><strong>状态</strong></p>
+<p>如何<strong>从小范围问题推向大范围问题</strong>？
+需要存下来小范围问题结果的某些信息，以此计算得到大范围的相同类型的信息。
+这些信息（称为状态）应该能够刻画问题的特征 【DP的状态设计】
+应该存在确定的计算方式，能从小范围问题的状态算出大范围问题的状态 【DP的转移方程】</p>
+<p>如何高效计算？
+只存储、处理我们需要的（最优）信息，减小复杂度。</p>
+<p>状态大多用数组存储，也存在更复杂的方式，比如
+<a href="https://atcoder.jp/contests/abc319/tasks/abc319_f" target="_blank">F - Fighter Takahashi (atcoder.jp)</a>
+<a href="https://ac.nowcoder.com/acm/contest/67744/F" target="_blank">F-来点每日一题_2024牛客寒假算法基础集训营4 (nowcoder.com)</a></p>
+<hr>
+<h2 id="一个例子">一个例子</h2>
+<p>给一个 $n\times m(2 \leq n,m \leq 10^2)$ 的网格，一开始在左上角 $(1,1)$ ，每一步只能向右或向下走，不能经过 &lsquo;#&rsquo; 格子，求走到右下角 $(n,m)$ 有多少种走法。</p>
+<p>原问题：到(i,j)有几种走法
+子问题：到(i-1,j)，到(i,j-1)有几种走法</p>
+<p>用<code>dp[i][j]</code>表示到$(i,j)$的走法数，答案是<code>dp[n][m]</code>。
+可得转移方程<code>dp[i][j]=dp[i-1][j]+dp[i][j-1]</code>。
+(二重for循环，i从小到大，j从小到大)
+对 &lsquo;#&rsquo; 格子，将对应的<code>dp[i][j]</code>赋为<code>0</code>。</p>
+<hr>
+<h2 id="问题特征">问题特征</h2>
+<p>能用动态规划解决的问题有以下几个特征。</p>
+<ul>
+<li>子问题重叠
+<strong>子问题是原大问题的小版本，解决方法完全一样</strong>,但范围、规模更小。计算大问题时，需要知道子问题的解。
+<strong>把大问题拆成小问题</strong></li>
+</ul>
+<blockquote>
+<p>如果有大量的重叠子问题，我们可以用空间将这些子问题的解存储下来，避免重复求解相同的子问题，从而提升效率。</p>
+</blockquote>
+<ul>
+<li>
+<p>最优子结构
+大问题的最优解包含小问题的最优解，可以<strong>从小问题的最优解推出大问题的最优解</strong>。</p>
+</li>
+<li>
+<p>无后效性
+已经求解的子问题，不会再受到后续决策的影响。
+<strong>只需要考虑子问题的状态</strong>，不需要知道经过什么步骤到达这个状态。</p>
+</li>
+</ul>
+<hr>
+<h3 id="基本思路">基本思路</h3>
+<p>动态规划分为几步：</p>
+<ol>
+<li>将原问题划分为若干子问题，提取这些子问题的特征（称之为 <strong>状态</strong>），<strong>用状态描述问题</strong>；</li>
+<li>寻找每一个状态的可能 <strong>决策</strong>，写 <strong>状态转移方程</strong>。</li>
+<li>写程序实现</li>
+</ol>
+<hr>
+<h2 id="转移写法">转移写法</h2>
+<ul>
+<li><code>for</code>循环（递推）</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>;i<span style="color:#f92672">&lt;=</span>n;<span style="color:#f92672">++</span>i)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> j<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>;j<span style="color:#f92672">&lt;=</span>m;<span style="color:#f92672">++</span>j)
+</span></span><span style="display:flex;"><span>		dp[i][j]<span style="color:#f92672">=</span>max(dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j],dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>填表法</strong> ：当前点的状态，根据状态方程，根据<strong>之前点</strong>的状态推导出来。
+<strong>刷表法</strong>：由当前点的状态，<strong>更新其他点</strong>的状态。</p>
+<ul>
+<li>记忆化搜索（递归）</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> dp[N][M];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">dfs</span>(<span style="color:#66d9ef">int</span> i,<span style="color:#66d9ef">int</span> j)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span>(i<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span><span style="color:#f92672">||</span>j<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>)<span style="color:#75715e">//边界
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span>(dp[i][j]<span style="color:#f92672">!=</span><span style="color:#ae81ff">0</span>)<span style="color:#75715e">//已经算过
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">return</span> dp[i][j];
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> dp[i][j]<span style="color:#f92672">=</span>max(dfs(i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,j),dfs(i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,j<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>));<span style="color:#75715e">//转移，储存
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>cout <span style="color:#f92672">&lt;&lt;</span> dfs(n,m);
+</span></span></code></pre></div><hr>
+<h2 id="实现">实现</h2>
+<p>考虑时间、空间复杂度，可能要在初步思路上优化</p>
+<ul>
+<li>状态： 刻画子问题的特征
+<ul>
+<li>准确，充分</li>
+<li>精简状态，控制状态数数量级在1e8内</li>
+</ul>
+</li>
+<li>转移写法：
+<ul>
+<li>一般写递推，如果递推很难写，试试记忆化搜索（会慢一点）</li>
+<li>如果直接暴力转移复杂度太高，再尝试优化</li>
+</ul>
+</li>
+</ul>
+<hr>
+<blockquote>
+<p>比如用<strong>前缀和</strong>优化，对$f[i]=\Sigma_{a[i]\leq j&lt;i}{f[j]}$，($1 \leq a[i] &lt; i$)，如果直接算是$O(n^{2})$的，
+&gt; <code>cpp &gt; for(int i=1;i&lt;=n;++i) &gt; { &gt;    for(int j=a[i];j&lt;i;++j) &gt;    { &gt; 	f[i]+=f[j];	 &gt;    }	 &gt; } &gt; </code>
+&gt; 如果在转移的同时算一下前缀和，是$O(n)$的，
+&gt; <code>cpp &gt; for(int i=1;i&lt;=n;++i) &gt; { &gt;    f[i]=sum[i-1]-sum[a[i]-1]; &gt;    sum[i]=sum[i-1]+f[i];	 &gt; } &gt; </code></p>
+</blockquote>
+<p>这个例子是随便举的（）</p>
+<hr>
+<h1 id="例题">例题</h1>
+<hr>
+<h2 id="frog2">frog2</h2>
+<p>河面上有$N(2 \leq N \leq 10^5)$块石头。有一只青蛙在第$1$块石头上，它想跳到第$N$块石头上。</p>
+<p>青蛙一次最多只能跳过$K(1 \leq K \leq 100)$块石头。从第$i$块跳到第$j$块需要花费青蛙$abs(h_i - h_j)$的体力$(1 \leq h_i \leq 10^4)$。求青蛙到达第$N$块石头所耗费的最小体力值。</p>
+<pre tabindex="0"><code>5 3
+10 30 40 50 20
+</code></pre><hr>
+<p><strong>最优化问题</strong></p>
+<p>用<code>dp[i]</code>表示到达第$i$块石头所耗费的<strong>最小</strong>体力值。</p>
+<p>$dp[i]=min(dp[j]+\lvert h[i]-h[j] \rvert),(0,i-x \leq j \leq i-1)$</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>赋初值 dp[1]=0
+</span></span><span style="display:flex;"><span>循环 i 2-&gt;n
+</span></span><span style="display:flex;"><span>  循环 j max(0,i-k) -&gt; i-1
+</span></span><span style="display:flex;"><span>答案dp[n]
+</span></span></code></pre></div><hr>
+<h2 id="滑雪">滑雪</h2>
+<p>Michael 喜欢滑雪。这并不奇怪，因为滑雪的确很刺激。可是为了获得速度，滑的区域必须向下倾斜，而且当你滑到坡底，你不得不再次走上坡或者等待升降机来载你。Michael 想知道在一个区域中最长的滑坡。
+区域由一个二维数组给出。数组的每个数字代表点的高度。下面是一个例子：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plain" data-lang="plain"><span style="display:flex;"><span>1   2   3   4   5
+</span></span><span style="display:flex;"><span>16  17  18  19  6
+</span></span><span style="display:flex;"><span>15  24  25  20  7
+</span></span><span style="display:flex;"><span>14  23  22  21  8
+</span></span><span style="display:flex;"><span>13  12  11  10  9
+</span></span></code></pre></div><p>一个人可以从某个点滑向上下左右相邻四个点之一，当且仅当高度会减小。在上面的例子中，一条可行的滑坡为 $24-17-16-1$（从 $24$ 开始，在 $1$ 结束）。当然    $25$－$24$－$23$－$\ldots$－$3$－$2$－$1$ 更长。事实上，这是最长的一条。</p>
+<p>对于 $100%$ 的数据，$1\leq R,C\leq 100$。</p>
+<hr>
+<p>定义<code>dp[i][j]</code>为以$(i,j)$结尾滑坡的最长长度，最短为1，
+从相邻且更高的点转移得到，长度加1取最大值。</p>
+<p>记忆化搜索，时间复杂度是总状态数$O(n*m)$。</p>
+<hr>
+<h2 id="经典的01背包">经典的01背包</h2>
+<p>有N件物品和一个容量是V的背包。第 i 件物品的体积是 vi，价值是 wi。</p>
+<p>对每件物品，可以选择是否放入背包，每件物品只能使用一次。要求物品的总体积不超过背包容量。</p>
+<p>求背包能装物品的最大总价值。</p>
+<hr>
+<p>让v&lt;=V且m尽量大。</p>
+<p>这里只是求一个答案，不需要对应的具体方案（哪些选，哪些不选）。所以对一个选择方案，只需要关心它的总体积v和总价值m。</p>
+<p>要素有：物品数量n，物品总体积v，总价值m。</p>
+<p>【问题状态设计】</p>
+<p>对n个物品，要求是： <strong>v&lt;=V</strong>, 而且 <strong>对确定的v，m最大</strong> 或 <strong>对确定的m， v最小</strong>。</p>
+<p>可以用<code>dp[v]</code>保存总体积&lt;=v时得到的最大价值。<code>dp[V]</code>就是所求答案。</p>
+<p>也可以<code>dp[m]</code>保存总价值为m时占用的最小空间。找到最大的i，使<code>dp[i]&lt;=V</code>，i即为答案。</p>
+<blockquote>
+<p>为什么dp[v]对应的是&lt;=v，而非=v时的最大价值：因为有可能最优方案装不满V，只能装到V-1,V-2之类。此时用dp[V]就能统计到这种情况。</p>
+</blockquote>
+<hr>
+<p>用DP的术语来说，原问题对应在n件物品中选择的情况，子问题就是n-1件物品选择的情况。可以从子问题一步步推到更大的问题，直到推到原问题。</p>
+<p>用<code>dp[v]</code>保存总体积&lt;=v时得到的最大价值。<code>dp[V]</code>就是所求答案。</p>
+<p>记<code>dp[i][j]</code>为在前i件物品中选择，选中体积最多为j的方案，获得的最大价值。</p>
+<p>转移方式：
+<code>dp[i][j]=dp[i-1][j] (j&lt;v[i])</code>
+<code>dp[i][j]=max(dp[i-1][j-v[i]]+w[i],dp[i-1][j])</code>，(<code>j&gt;=v[i]</code>)</p>
+<p>已知考虑前i-1件物品获得的最优情况和第i件物品的信息(<code>dp[i-1]</code>和<code>v[i]</code>,<code>w[i]</code>) ，<code>dp[i][j]</code>可以从两种途径获得，第一是选择第i件物品时，从<code>dp[i-1][j-v[i]]+w[i]</code>转移得到，第二是不选第i件物品时，从<code>dp[i-1][j]</code>转移得到。对于两种答案取最优值储存。</p>
+<hr>
+<p>总的状态数是$O(n\times{V})$
+转移时，复杂度为$O(n\times{V})$。</p>
+<p>整个过程的复杂度是$O(n\times{V})$。</p>
+<p>初始化时，将<code>dp</code>全赋为0即可。
+<code>dp[0][0]</code>可以被视为是dp的起点。</p>
+<hr>
+<p><code>dp[i][m]</code>保存在前i个物品中选取，总价值为m时占用的最小空间。</p>
+<p>初始化时赋为INF</p>
+<p><code>dp[i][m]=dp[i-1][m],(m&lt;w[i])</code>
+<code>dp[i][m]=min(dp[i-1][m],dp[i-1][m-w[i]]+v[i]),(m&gt;v[i])</code></p>
+<p>总的状态数是物品数*总价值$O(n\times\Sigma{w_i})$
+复杂度也是如此</p>
+<hr>
+<h2 id="cf577b--modulo-sum">CF577B  Modulo Sum</h2>
+<p>给出长度为n的序列a和整数m，求是否存在一个非空的a的子序列，满足该子序列的和能为m所整除。
+ (1 ≤ <em>n</em> ≤ 1e6, 2 ≤ <em>m</em> ≤ 1e3, 0 ≤ <em>$a_i$</em> ≤ 1e9)
+ 时限 2s，空间 256mb
+ 
+ 子序列不是连续的:  可以在n个数中选数，每个数或者选或者不选，问能不能选到数的总和模m为0。</p>
+<hr>
+<p> 
+ 已经选了一些数，再选新的数时，就能从选之前的数模m的可能性推出现在选或不选这个数后得到的模m的结果。以这种方式递推。
+ 
+ 定义<code>dp[i][j]</code>表示在前<code>i</code>个数中选数，总和模m等于j的情况是否存在（0为不存在，1为存在）。
+ 
+如果<code>dp[i-1][j]==1</code>，考虑<code>a[i]</code>选不选，选则<code>dp[i][(a[i]+j)%m]=1</code>，不选则<code>dp[i][j]=1</code>。转移时这样写就可以：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>  dp[i][(a[i]<span style="color:#f92672">+</span>j)<span style="color:#f92672">%</span>m]<span style="color:#f92672">|=</span>dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j];
+</span></span><span style="display:flex;"><span>  dp[i][j]<span style="color:#f92672">|=</span>dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j];
+</span></span></code></pre></div><p>这样要开dp[n][m],有$O(nm)$个状态，每个状态的转移是$O(1)$的，总时间复杂度为$O(nm)=O(10^9)$。状态数本身就太多了。</p>
+<hr>
+<p>如果n&gt;=m，一定能选出符合要求的子序列。
+(考虑前缀和)</p>
+<p>在n&lt;m时，再执行前面的动态规划过程，此时$O(nm)\leq O(m^2)$个状态，总时间复杂度也是$O(m^2)$。</p>
+<hr>
+
+  
+  <hr>
+<div class="footer">
+    
+	    
+            <a class="previous-post" href="https://www.mortalodyssey.com/posts/begin_with_dijkstra/?ref=footer"><span style="font-weight:bold;">« Previous</span><br>从dijkstra开始</a>
+        
+	    
+            <div class="next-post">
+                <a href="https://www.mortalodyssey.com/posts/icpc-shenyang-2023-i/?ref=footer"><span style="font-weight:bold;">Next »</span><br>2023ICPC沈阳 I题 Three Rectangles</a>
+            </div>
+        
+    
+</div>
+
+  
+</div>
+            </main>
+            
+  
+    <div class="article-toc ">
+    <div class="toc-wrapper">
+      <h4 id="contents"></h4>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#一个例子">一个例子</a></li>
+    <li><a href="#问题特征">问题特征</a>
+      <ul>
+        <li><a href="#基本思路">基本思路</a></li>
+      </ul>
+    </li>
+    <li><a href="#转移写法">转移写法</a></li>
+    <li><a href="#实现">实现</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#frog2">frog2</a></li>
+    <li><a href="#滑雪">滑雪</a></li>
+    <li><a href="#经典的01背包">经典的01背包</a></li>
+    <li><a href="#cf577b--modulo-sum">CF577B  Modulo Sum</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+  
+
+        </div>
+    </body>
+</html>

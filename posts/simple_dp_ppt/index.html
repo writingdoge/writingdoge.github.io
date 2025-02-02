@@ -99,7 +99,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.142.0">
+<meta name="generator" content="Hugo 0.143.0">
 
 
     
@@ -403,8 +403,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 <strong>把大问题拆成小问题</strong></li>
 </ul>
 <blockquote>
-<p>如果有大量的重叠子问题，我们可以用空间将这些子问题的解存储下来，避免重复求解相同的子问题，从而提升效率。</p>
-</blockquote>
+<p>如果有大量的重叠子问题，我们可以用空间将这些子问题的解存储下来，避免重复求解相同的子问题，从而提升效率。</p></blockquote>
 <ul>
 <li>
 <p>最优子结构
@@ -471,8 +470,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 <p>比如用<strong>前缀和</strong>优化，对$f[i]=\Sigma_{a[i]\leq j&lt;i}{f[j]}$，($1 \leq a[i] &lt; i$)，如果直接算是$O(n^{2})$的，
 &gt; <code>cpp &gt; for(int i=1;i&lt;=n;++i) &gt; { &gt;    for(int j=a[i];j&lt;i;++j) &gt;    { &gt; 	f[i]+=f[j];	 &gt;    }	 &gt; } &gt; </code>
 &gt; 如果在转移的同时算一下前缀和，是$O(n)$的，
-&gt; <code>cpp &gt; for(int i=1;i&lt;=n;++i) &gt; { &gt;    f[i]=sum[i-1]-sum[a[i]-1]; &gt;    sum[i]=sum[i-1]+f[i];	 &gt; } &gt; </code></p>
-</blockquote>
+&gt; <code>cpp &gt; for(int i=1;i&lt;=n;++i) &gt; { &gt;    f[i]=sum[i-1]-sum[a[i]-1]; &gt;    sum[i]=sum[i-1]+f[i];	 &gt; } &gt; </code></p></blockquote>
 <p>这个例子是随便举的（）</p>
 <hr>
 <h1 id="例题">例题</h1>
@@ -519,8 +517,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 <p>可以用<code>dp[v]</code>保存总体积&lt;=v时得到的最大价值。<code>dp[V]</code>就是所求答案。</p>
 <p>也可以<code>dp[m]</code>保存总价值为m时占用的最小空间。找到最大的i，使<code>dp[i]&lt;=V</code>，i即为答案。</p>
 <blockquote>
-<p>为什么dp[v]对应的是&lt;=v，而非=v时的最大价值：因为有可能最优方案装不满V，只能装到V-1,V-2之类。此时用dp[V]就能统计到这种情况。</p>
-</blockquote>
+<p>为什么dp[v]对应的是&lt;=v，而非=v时的最大价值：因为有可能最优方案装不满V，只能装到V-1,V-2之类。此时用dp[V]就能统计到这种情况。</p></blockquote>
 <hr>
 <p>用DP的术语来说，原问题对应在n件物品中选择的情况，子问题就是n-1件物品选择的情况。可以从子问题一步步推到更大的问题，直到推到原问题。</p>
 <p>用<code>dp[v]</code>保存总体积&lt;=v时得到的最大价值。<code>dp[V]</code>就是所求答案。</p>

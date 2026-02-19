@@ -26,9 +26,6 @@
     <loc>https://www.mortalodyssey.com/about/about/</loc>
     <lastmod>2024-10-05T00:00:44+08:00</lastmod>
   </url><url>
-    <loc>https://www.mortalodyssey.com/%E5%91%A8%E6%8A%A5/</loc>
-    <lastmod>2024-10-04T23:57:14+08:00</lastmod>
-  </url><url>
     <loc>https://www.mortalodyssey.com/posts/grid/</loc>
     <lastmod>2024-05-04T17:40:20+08:00</lastmod>
   </url><url>
@@ -50,5 +47,7 @@
     <loc>https://www.mortalodyssey.com/series/</loc>
   </url><url>
     <loc>https://www.mortalodyssey.com/tags/</loc>
+  </url><url>
+    <loc>https://www.mortalodyssey.com/%E5%91%A8%E6%8A%A5/</loc>
   </url>
 </urlset>

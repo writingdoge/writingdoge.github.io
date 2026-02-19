@@ -20,7 +20,7 @@
 
 
 
-<script defer language="javascript" type="text/javascript" src="/js/bundle.min.145453261a7755f5042a854c4213501d215a8fbe34c08d181c40f803f1315e74.js"></script>
+<script defer language="javascript" type="text/javascript" src="/js/bundle.min.d451ff92e80abc2a828eb9bb262e4db374bd4e954642f9245c54eec84bf690f3.js"></script>
 
 
 
@@ -97,13 +97,13 @@
 
 
 
-<meta name="generator" content="Hugo 0.143.1">
+<meta name="generator" content="Hugo 0.156.0">
 
 
     
     
 
-<link type="text/css" rel="stylesheet" href="/css/bundle.min.94a339836f89f0d25f31980cb6b0631da21e20af128308747ce44e0525eb16ef.css">
+<link type="text/css" rel="stylesheet" href="/css/bundle.min.607435cac0c3b4b44373c5634a7dd4f3b5b8f756061890d922e60e385c6d551f.css">
 
 
     
@@ -318,7 +318,7 @@
         <p class="footnote">
 powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a target="_blank" href="https://github.com/lukeorth/poison">poison</a>
     <br>
-    &copy; 2025 Mortal Odyssey. All rights reserved.
+    &copy; 2026 Mortal Odyssey. All rights reserved.
 </p>
 
         
@@ -373,7 +373,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 <p><a href="https://bazel.build/?hl=zh-cn" target="_blank">Bazel官网</a>中可以找到推荐的安装方式是使用Bazelisk，一个有版本管理功能的Bazel启动器。
 <img src="https://pic-1324265358.cos.ap-nanjing.myqcloud.com/Pasted%20image%2020241016225027.png" alt="Pasted image 20241016225027.png"></p>
 <p>可以直接下载deb文件并安装</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wget https://github.com/bazelbuild/bazelisk/releases/download/v1.22.0/bazelisk-amd64.deb
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wget https://github.com/bazelbuild/bazelisk/releases/download/v1.22.0/bazelisk-amd64.deb
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>dpkg -i bazelisk-amd64.deb
 </span></span></code></pre></div><p>理论上，只要输入<code>bazel</code>，bazelisk就会初次启动，自动下载Bazel某个版本。那么只要输入<code>bazel --version</code>后能看到版本信息，就能确定Bazel安装成功。</p>
@@ -394,7 +394,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 <p><a href="https://github.com/bazelbuild/bazelisk/issues/571" target="_blank">Steps for installing Bazelisk are not new-developer friendly</a></p>
 <h2 id="编译运行trpc-cpp">编译运行trpc-cpp</h2>
 <p>只要按照<a href="https://github.com/trpc-group/trpc-cpp/blob/main/docs/zh/setup_env.md" target="_blank">trpc-cpp/docs/zh/setup_env.md</a>上的说明操作即可，具体如下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># 进入根目录trpc-cpp</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># 进入根目录trpc-cpp</span>
 </span></span><span style="display:flex;"><span>cd trpc-cpp
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 用bazel编译并运行框架提供的example示例</span>
@@ -656,12 +656,12 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 <h3 id="分析及实现">分析及实现</h3>
 <p>手推规律后，发现有循环性。如下图：</p>
 <h3 id="代码">代码</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#define int long long
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define endl &#39;\n&#39;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> ull;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> ull;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> N <span style="color:#f92672">=</span> <span style="color:#ae81ff">1e5</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> INF <span style="color:#f92672">=</span> <span style="color:#ae81ff">0x3f3f3f3f3f3f3f3f</span>;
@@ -698,7 +698,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> k;
 </span></span><span style="display:flex;"><span>    cin <span style="color:#f92672">&gt;&gt;</span> s <span style="color:#f92672">&gt;&gt;</span> t <span style="color:#f92672">&gt;&gt;</span> k;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (t <span style="color:#f92672">==</span> s) <span style="color:#75715e">/////
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    {
+</span></span></span><span style="display:flex;"><span>    {
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> INV <span style="color:#f92672">=</span> inv(<span style="color:#ae81ff">3</span>, MOD);
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> b1 <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> INV) <span style="color:#f92672">%</span> MOD;
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> ans <span style="color:#f92672">=</span> b1 <span style="color:#f92672">*</span> qpow(<span style="color:#ae81ff">4</span>, k <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> MOD;
@@ -725,12 +725,12 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </span></span><span style="display:flex;"><span>        s[j] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0&#39;</span> <span style="color:#f92672">+</span> (s[j] <span style="color:#f92672">-</span> <span style="color:#e6db74">&#39;0&#39;</span>) <span style="color:#f92672">^</span> (t[i] <span style="color:#f92672">-</span> <span style="color:#e6db74">&#39;0&#39;</span>);
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">// s
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (s.length() <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>)
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (s.length() <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>)
 </span></span><span style="display:flex;"><span>    {
 </span></span><span style="display:flex;"><span>        s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0&#34;</span> <span style="color:#f92672">+</span> s;
 </span></span><span style="display:flex;"><span>    } <span style="color:#75715e">// 0123
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>   <span style="color:#75715e">// cout &lt;&lt; &#34;s &#34; &lt;&lt; s &lt;&lt; endl;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> fir <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span></span><span style="display:flex;"><span>   <span style="color:#75715e">// cout &lt;&lt; &#34;s &#34; &lt;&lt; s &lt;&lt; endl;
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> fir <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> base <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> s.length() <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">-=</span> <span style="color:#ae81ff">2</span>)
 </span></span><span style="display:flex;"><span>    {
@@ -748,7 +748,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </span></span><span style="display:flex;"><span>    fir <span style="color:#f92672">+=</span> MOD;
 </span></span><span style="display:flex;"><span>    fir <span style="color:#f92672">%=</span> MOD;
 </span></span><span style="display:flex;"><span>  <span style="color:#75715e">//  cout &lt;&lt; &#34;fir &#34; &lt;&lt; fir &lt;&lt; endl;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> cnt00 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> s.length() <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>; i<span style="color:#f92672">-=</span><span style="color:#ae81ff">2</span>)
 </span></span><span style="display:flex;"><span>    {
@@ -770,7 +770,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> INV <span style="color:#f92672">=</span> inv(<span style="color:#ae81ff">3</span>, MOD);
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> b1 <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> INV) <span style="color:#f92672">%</span> MOD;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> ans <span style="color:#f92672">=</span> b1 <span style="color:#f92672">*</span> qpow(<span style="color:#ae81ff">4</span>, k <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> MOD; <span style="color:#75715e">// add
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    ans <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>;
+</span></span></span><span style="display:flex;"><span>    ans <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>;
 </span></span><span style="display:flex;"><span>    ans <span style="color:#f92672">+=</span> MOD;
 </span></span><span style="display:flex;"><span>    ans <span style="color:#f92672">%=</span> MOD;
 </span></span><span style="display:flex;"><span>    ans <span style="color:#f92672">-=</span> INV;
@@ -785,7 +785,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">signed</span> <span style="color:#a6e22e">main</span>()
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">// cout.flags(ios::fixed); cout.precision(8);
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    ios<span style="color:#f92672">::</span>sync_with_stdio(false);
+</span></span></span><span style="display:flex;"><span>    ios<span style="color:#f92672">::</span>sync_with_stdio(false);
 </span></span><span style="display:flex;"><span>    cin.tie(<span style="color:#ae81ff">0</span>);
 </span></span><span style="display:flex;"><span>    cout.tie(<span style="color:#ae81ff">0</span>);
 </span></span><span style="display:flex;"><span>
@@ -864,12 +864,12 @@ H,W范围1e9， $1\leq h_i \leq H, 1 \leq w_i \leq W$</p>
 可能满足条件的分别有1个和2个，比如满足h=H和w=W的分别有1、2个，此时应该从w=W出发讨论。 因为此时满足h=H的不一定盖住矩形一边。</p>
 <h3 id="代码">代码</h3>
 <p>因为开始思路不清，写的有点麻烦</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#define int long long
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define endl &#39;\n&#39;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> ull;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> ull;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> N <span style="color:#f92672">=</span> <span style="color:#ae81ff">1e5</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> INF <span style="color:#f92672">=</span> <span style="color:#ae81ff">0x3f3f3f3f3f3f3f3f</span>;
@@ -899,7 +899,7 @@ H,W范围1e9， $1\leq h_i \leq H, 1 \leq w_i \leq W$</p>
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">// cout &lt;&lt; ch &lt;&lt; &#34; &#34; &lt;&lt; cw &lt;&lt; endl;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> ans <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (cf <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>)
@@ -923,14 +923,14 @@ H,W范围1e9， $1\leq h_i \leq H, 1 \leq w_i \leq W$</p>
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (ch <span style="color:#f92672">&lt;</span> cw) <span style="color:#75715e">// 对应 1 vs 2 的情况 ，旋转矩形
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    {
+</span></span></span><span style="display:flex;"><span>    {
 </span></span><span style="display:flex;"><span>        swap(H, W);
 </span></span><span style="display:flex;"><span>        swap(ch, cw);
 </span></span><span style="display:flex;"><span>        swap(h, w);
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ch!=0
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (ch <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span>)
 </span></span><span style="display:flex;"><span>    {
 </span></span><span style="display:flex;"><span>        ans <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
@@ -952,14 +952,14 @@ H,W范围1e9， $1\leq h_i \leq H, 1 \leq w_i \leq W$</p>
 </span></span><span style="display:flex;"><span>            {
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">int</span> step <span style="color:#f92672">=</span> W <span style="color:#f92672">-</span> cover;
 </span></span><span style="display:flex;"><span>                <span style="color:#75715e">// 1    4   6
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#66d9ef">int</span> l, r;
+</span></span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">int</span> l, r;
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (mid <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>)
 </span></span><span style="display:flex;"><span>                    l <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>, r <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (mid <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>)
 </span></span><span style="display:flex;"><span>                    l <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, r <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (mid <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span>)
 </span></span><span style="display:flex;"><span>                    l <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, r <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; <span style="color:#75715e">//强制安排两侧左右位置
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#66d9ef">int</span> ndl2 <span style="color:#f92672">=</span> w[l] <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">int</span> ndl2 <span style="color:#f92672">=</span> w[l] <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">int</span> ndl1 <span style="color:#f92672">=</span> W <span style="color:#f92672">-</span> w[r] <span style="color:#f92672">-</span> w[mid] <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
 </span></span><span style="display:flex;"><span>                ndl1 <span style="color:#f92672">=</span> max(ndl1, (<span style="color:#66d9ef">int</span>)<span style="color:#ae81ff">1</span>);
 </span></span><span style="display:flex;"><span>                ndl2 <span style="color:#f92672">=</span> min(ndl2, W <span style="color:#f92672">-</span> w[mid] <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
@@ -983,7 +983,7 @@ H,W范围1e9， $1\leq h_i \leq H, 1 \leq w_i \leq W$</p>
 </span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (l <span style="color:#f92672">+</span> w[r] <span style="color:#f92672">&gt;=</span> W)
 </span></span><span style="display:flex;"><span>            {
 </span></span><span style="display:flex;"><span>                ans <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">///
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                ans <span style="color:#f92672">%=</span> MOD;
+</span></span></span><span style="display:flex;"><span>                ans <span style="color:#f92672">%=</span> MOD;
 </span></span><span style="display:flex;"><span>                ans <span style="color:#f92672">+=</span> MOD;
 </span></span><span style="display:flex;"><span>                ans <span style="color:#f92672">%=</span> MOD;
 </span></span><span style="display:flex;"><span>            }
@@ -1045,7 +1045,7 @@ H,W范围1e9， $1\leq h_i \leq H, 1 \leq w_i \leq W$</p>
 </span></span><span style="display:flex;"><span>                {
 </span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;&lt;</span> endl;
 </span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">return</span>; <span style="color:#75715e">///////
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                }
+</span></span></span><span style="display:flex;"><span>                }
 </span></span><span style="display:flex;"><span>            }
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>        ans <span style="color:#f92672">*=</span> <span style="color:#ae81ff">2</span>;
@@ -1060,7 +1060,7 @@ H,W范围1e9， $1\leq h_i \leq H, 1 \leq w_i \leq W$</p>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">signed</span> <span style="color:#a6e22e">main</span>()
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">// cout.flags(ios::fixed); cout.precision(8);
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    ios<span style="color:#f92672">::</span>sync_with_stdio(false);
+</span></span></span><span style="display:flex;"><span>    ios<span style="color:#f92672">::</span>sync_with_stdio(false);
 </span></span><span style="display:flex;"><span>    cin.tie(<span style="color:#ae81ff">0</span>);
 </span></span><span style="display:flex;"><span>    cout.tie(<span style="color:#ae81ff">0</span>);
 </span></span><span style="display:flex;"><span>
@@ -1071,45 +1071,45 @@ H,W范围1e9， $1\leq h_i \leq H, 1 \leq w_i \leq W$</p>
 </span></span><span style="display:flex;"><span>        solve();
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">//////////////////////////用来测试的
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// int ww[3] = {5, 5, 4};
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// int n = 5;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// int ans = 0;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// for (int i = 1; i &lt;= n; ++i)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// {
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//     for (int j = 1; j &lt;= n; ++j)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//     {
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//         for (int k = 1; k &lt;= n; ++k)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//         {
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//             vector&lt;int&gt; s(n + 1, 0);
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//             if (i + ww[0] - 1 &gt; n || j + ww[1] - 1 &gt; n || k + ww[2] - 1 &gt; n)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//                 continue;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//             for (int l = i; l &lt;= i + ww[0] - 1; ++l)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//             {
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//                 s[l] = 1;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//             }
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//             for (int l = j; l &lt;= j + ww[1] - 1; ++l)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//             {
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//                 s[l] = 1;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//             }
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//             for (int l = k; l &lt;= k + ww[2] - 1; ++l)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//             {
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//                 s[l] = 1;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//             }
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//             int ok = 1;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//             for (int l = 1; l &lt;= n; ++l)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//             {
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//                 if (s[l] == 0)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//                     ok = 0;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//             }
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//             if (ok)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//             {
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//                 ans++;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//             }
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//         }
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//     }
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// }
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// cout &lt;&lt; ans &lt;&lt; endl;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">// int ww[3] = {5, 5, 4};
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">// int n = 5;
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">// int ans = 0;
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">// for (int i = 1; i &lt;= n; ++i)
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">// {
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//     for (int j = 1; j &lt;= n; ++j)
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//     {
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//         for (int k = 1; k &lt;= n; ++k)
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//         {
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//             vector&lt;int&gt; s(n + 1, 0);
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//             if (i + ww[0] - 1 &gt; n || j + ww[1] - 1 &gt; n || k + ww[2] - 1 &gt; n)
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//                 continue;
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//             for (int l = i; l &lt;= i + ww[0] - 1; ++l)
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//             {
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//                 s[l] = 1;
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//             }
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//             for (int l = j; l &lt;= j + ww[1] - 1; ++l)
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//             {
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//                 s[l] = 1;
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//             }
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//             for (int l = k; l &lt;= k + ww[2] - 1; ++l)
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//             {
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//                 s[l] = 1;
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//             }
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//             int ok = 1;
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//             for (int l = 1; l &lt;= n; ++l)
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//             {
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//                 if (s[l] == 0)
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//                     ok = 0;
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//             }
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//             if (ok)
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//             {
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//                 ans++;
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//             }
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//         }
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//     }
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">// }
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">// cout &lt;&lt; ans &lt;&lt; endl;
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
@@ -1117,10 +1117,6 @@ H,W范围1e9， $1\leq h_i \leq H, 1 \leq w_i \leq W$</p>
 </span></span><span style="display:flex;"><span>  	 	 			 	 		    	 	  	 	 		
 </span></span></code></pre></div><h3 id="回顾">回顾</h3>
 <p>其实不难，细致即可。</p>
-        
-        <div class="read-more-link">
-            <a href="/posts/icpc-shenyang-2023-i/">Read More…</a>
-        </div>
         
         
     </article>
@@ -1202,7 +1198,8 @@ H,W范围1e9， $1\leq h_i \leq H, 1 \leq w_i \leq W$</p>
 <strong>把大问题拆成小问题</strong></li>
 </ul>
 <blockquote>
-<p>如果有大量的重叠子问题，我们可以用空间将这些子问题的解存储下来，避免重复求解相同的子问题，从而提升效率。</p></blockquote>
+<p>如果有大量的重叠子问题，我们可以用空间将这些子问题的解存储下来，避免重复求解相同的子问题，从而提升效率。</p>
+</blockquote>
 <ul>
 <li>
 <p>最优子结构
@@ -1227,7 +1224,7 @@ H,W范围1e9， $1\leq h_i \leq H, 1 \leq w_i \leq W$</p>
 <ul>
 <li><code>for</code>循环（递推）</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>;i<span style="color:#f92672">&lt;=</span>n;<span style="color:#f92672">++</span>i)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>;i<span style="color:#f92672">&lt;=</span>n;<span style="color:#f92672">++</span>i)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> j<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>;j<span style="color:#f92672">&lt;=</span>m;<span style="color:#f92672">++</span>j)
 </span></span><span style="display:flex;"><span>		dp[i][j]<span style="color:#f92672">=</span>max(dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j],dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]);
@@ -1333,7 +1330,7 @@ H,W范围1e9， $1\leq h_i \leq H, 1 \leq w_i \leq W$</p>
 <h2 id="分析">分析</h2>
 <p>由最大异或值可以想到线性基，其中插入、求异或最大值的操作都需log(x)复杂度。</p>
 <p>x-y简单路径让我想到倍增LCA</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">insert</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>a,<span style="color:#66d9ef">int</span> x)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">insert</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>a,<span style="color:#66d9ef">int</span> x)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>M;i<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">0</span>;<span style="color:#f92672">--</span>i)
 </span></span><span style="display:flex;"><span>    {
@@ -1348,7 +1345,7 @@ H,W范围1e9， $1\leq h_i \leq H, 1 \leq w_i \leq W$</p>
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">querymax</span>()
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">querymax</span>()
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> ret<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>M;i<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">0</span>;<span style="color:#f92672">--</span>i)
@@ -1359,8 +1356,8 @@ H,W范围1e9， $1\leq h_i \leq H, 1 \leq w_i \leq W$</p>
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>对q个询问，用倍增预处理。</p>
 <p>简单定义线性基的merge操作，$O(M^{2})$</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">merge</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>a,<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>b)<span style="color:#75715e">//a &lt;-b
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>{
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">merge</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>a,<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>b)<span style="color:#75715e">//a &lt;-b
+</span></span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;=</span>M;<span style="color:#f92672">++</span>i)
 </span></span><span style="display:flex;"><span>    {
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(b[i])

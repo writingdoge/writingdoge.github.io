@@ -20,7 +20,7 @@
 
 
 
-<script defer language="javascript" type="text/javascript" src="/js/bundle.min.145453261a7755f5042a854c4213501d215a8fbe34c08d181c40f803f1315e74.js"></script>
+<script defer language="javascript" type="text/javascript" src="/js/bundle.min.d451ff92e80abc2a828eb9bb262e4db374bd4e954642f9245c54eec84bf690f3.js"></script>
 
 
 
@@ -99,13 +99,13 @@
 
 
 
-<meta name="generator" content="Hugo 0.143.1">
+<meta name="generator" content="Hugo 0.156.0">
 
 
     
     
 
-<link type="text/css" rel="stylesheet" href="/css/bundle.min.94a339836f89f0d25f31980cb6b0631da21e20af128308747ce44e0525eb16ef.css">
+<link type="text/css" rel="stylesheet" href="/css/bundle.min.607435cac0c3b4b44373c5634a7dd4f3b5b8f756061890d922e60e385c6d551f.css">
 
 
     
@@ -320,7 +320,7 @@
         <p class="footnote">
 powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a target="_blank" href="https://github.com/lukeorth/poison">poison</a>
     <br>
-    &copy; 2025 Mortal Odyssey. All rights reserved.
+    &copy; 2026 Mortal Odyssey. All rights reserved.
 </p>
 
         
@@ -371,7 +371,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 <h2 id="分析">分析</h2>
 <p>由最大异或值可以想到线性基，其中插入、求异或最大值的操作都需log(x)复杂度。</p>
 <p>x-y简单路径让我想到倍增LCA</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">insert</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>a,<span style="color:#66d9ef">int</span> x)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">insert</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>a,<span style="color:#66d9ef">int</span> x)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>M;i<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">0</span>;<span style="color:#f92672">--</span>i)
 </span></span><span style="display:flex;"><span>    {
@@ -386,7 +386,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">querymax</span>()
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">querymax</span>()
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> ret<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>M;i<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">0</span>;<span style="color:#f92672">--</span>i)
@@ -397,8 +397,8 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>对q个询问，用倍增预处理。</p>
 <p>简单定义线性基的merge操作，$O(M^{2})$</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">merge</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>a,<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>b)<span style="color:#75715e">//a &lt;-b
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>{
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">merge</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>a,<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>b)<span style="color:#75715e">//a &lt;-b
+</span></span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;=</span>M;<span style="color:#f92672">++</span>i)
 </span></span><span style="display:flex;"><span>    {
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(b[i])
@@ -410,17 +410,17 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </span></span></code></pre></div><h3 id="线性基的倍增">线性基的倍增</h3>
 <p>用三维数组p表示线性基，p[i][j]包含i到f[i][j]的线性基（左闭右开）。</p>
 <p>对深度为x的结点i，p[i][j]仅在(0 &lt;=j &lt;= log(x))的范围内有意义。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>insert(p[i][<span style="color:#ae81ff">0</span>],a[i]);<span style="color:#75715e">//数据读入时
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>insert(p[i][<span style="color:#ae81ff">0</span>],a[i]);<span style="color:#75715e">//数据读入时
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>;(<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> i)<span style="color:#f92672">&lt;=</span>dep[now];<span style="color:#f92672">++</span>i)<span style="color:#75715e">//倍增中
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>{
+</span></span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>	f[now][i]<span style="color:#f92672">=</span>f[f[now][i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]][i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>];
 </span></span><span style="display:flex;"><span>	memcpy(p[now][i],p[now][i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],<span style="color:#66d9ef">sizeof</span>(p[now][i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]));
 </span></span><span style="display:flex;"><span>	merge(p[now][i],p[f[now][i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]][i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]);<span style="color:#75715e">//将后一个插入前一个
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h3 id="暴改lca">暴改LCA</h3>
 <p>在原求LCA的代码上适当修改，在倍增途中合并线性基。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>function <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span> (<span style="color:#66d9ef">int</span>,<span style="color:#66d9ef">int</span>)<span style="color:#f92672">&gt;</span> lca<span style="color:#f92672">=</span>[<span style="color:#f92672">&amp;</span>](<span style="color:#66d9ef">int</span> x,<span style="color:#66d9ef">int</span> y)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>function <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span> (<span style="color:#66d9ef">int</span>,<span style="color:#66d9ef">int</span>)<span style="color:#f92672">&gt;</span> lca<span style="color:#f92672">=</span>[<span style="color:#f92672">&amp;</span>](<span style="color:#66d9ef">int</span> x,<span style="color:#66d9ef">int</span> y)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span>(dep[x]<span style="color:#f92672">&gt;</span>dep[y])   swap(x,y);
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> k<span style="color:#f92672">=</span>dep[y]<span style="color:#f92672">-</span>dep[x];
@@ -437,7 +437,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span>(x<span style="color:#f92672">==</span>y)
 </span></span><span style="display:flex;"><span>	{
 </span></span><span style="display:flex;"><span>		merge(ans,p[x][<span style="color:#ae81ff">0</span>]);<span style="color:#75715e">//最后一点
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">return</span> x;
+</span></span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> x;
 </span></span><span style="display:flex;"><span>	}    
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">19</span>;i<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">0</span>;<span style="color:#f92672">--</span>i)
@@ -449,9 +449,9 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </span></span><span style="display:flex;"><span>	}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>	merge(ans,p[x][<span style="color:#ae81ff">0</span>]);<span style="color:#75715e">//最后的x,y两点与LCA
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	merge(ans,p[y][<span style="color:#ae81ff">0</span>]);
+</span></span></span><span style="display:flex;"><span>	merge(ans,p[y][<span style="color:#ae81ff">0</span>]);
 </span></span><span style="display:flex;"><span>	merge(ans,p[f[y][<span style="color:#ae81ff">0</span>]][<span style="color:#ae81ff">0</span>]);<span style="color:#75715e">//保证p不超定义域
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> f[x][<span style="color:#ae81ff">0</span>];
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>};
